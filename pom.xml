@@ -1,10 +1,10 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.apache.xbean</groupId>
+  <groupId>org.xbean</groupId>
   <artifactId>xbean</artifactId>
   <packaging>pom</packaging>
   <name>XBean</name>
-  <version>2.2-SNAPSHOT</version>
+  <version>2.1</version>
   <description>XBean is a plugin based server archtecutre.</description>
   <url>http://xbean.org</url>
   <issueManagement>
@@ -40,12 +40,12 @@
   </mailingLists>
   <developers>
     <developer>
-      <id>chirino</id>
-      <name>Hiram Chirino</name>
+      <id>adc</id>
+      <name>Alan D. Cabrera</name>
       <roles>
         <role>Commiter</role>
       </roles>
-      <timezone>-5</timezone>
+      <timezone>-8</timezone>
     </developer>
     <developer>
       <id>dain</id>
@@ -53,6 +53,8 @@
       <email>dain@iq80.com</email>
       <roles>
         <role>Commiter</role>
+        <role>Despot</role>
+        <role>Release Boy</role>
       </roles>
       <timezone>-8</timezone>
     </developer>
@@ -60,30 +62,6 @@
       <id>dblevins</id>
       <name>David Blevins</name>
       <email>dblevins@visi.com</email>
-      <roles>
-        <role>Commiter</role>
-      </roles>
-      <timezone>-8</timezone>
-    </developer>
-    <developer>
-      <id>jstrachan</id>
-      <name>James Strachan</name>
-      <roles>
-        <role>Commiter</role>
-      </roles>
-      <timezone>-8</timezone>
-    </developer>
-    <developer>
-      <id>jvanzyl</id>
-      <name>Jason van Zyl</name>
-      <roles>
-        <role>Commiter</role>
-      </roles>
-      <timezone>-8</timezone>
-    </developer>
-    <developer>
-      <id>maguro</id>
-      <name>Alan D. Cabrera</name>
       <roles>
         <role>Commiter</role>
       </roles>
@@ -98,9 +76,9 @@
     </license>
   </licenses>
   <scm>
-    <connection>scm:svn:https://svn.codehaus.org/xbean/trunk/</connection>
-    <developerConnection>scm:svn:https://${maven.username}@svn.codehaus.org/xbean/trunk/</developerConnection>
-    <url>https://svn.codehaus.org/xbean/trunk/</url>
+    <connection>scm:svn:https://svn.codehaus.org/xbean/tags/xbean-2.1/</connection>
+    <developerConnection>scm:svn:https://${maven.username}@svn.codehaus.org/xbean/tags/xbean-2.1/</developerConnection>
+    <url>https://svn.codehaus.org/xbean/tags/xbean-2.1/</url>
   </scm>
   <organization>
     <name>XBean</name>
@@ -126,9 +104,7 @@
     </pluginManagement>
     <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-one-plugin</artifactId>
-        <version>1.0-SNAPSHOT</version>
         <executions>
           <execution>
             <goals>
@@ -146,14 +122,10 @@
   </build>
   <modules>
     <module>classpath</module>
-    <module>jmx</module>
     <module>kernel</module>
     <module>osgi</module>
-    <module>reflect</module>
-    <!--module>sca</module-->
     <module>server</module>
     <module>spring</module>
-    <module>telnet</module>
   </modules>
   <repositories>
     <repository>
@@ -217,8 +189,8 @@
       </dependency>
       <dependency>
         <groupId>groovy</groupId>
-        <artifactId>groovy</artifactId>
-        <version>1.0-jsr-03</version>
+        <artifactId>groovy-1.0-jsr</artifactId>
+        <version>03</version>
       </dependency>
       <dependency>
         <groupId>org.livetribe</groupId>
@@ -251,12 +223,12 @@
         <version>1.0</version>
       </dependency>
       <dependency>
-        <groupId>org.apache.xbean</groupId>
+        <groupId>org.xbean</groupId>
         <artifactId>xbean-kernel</artifactId>
         <version>${version}</version>
       </dependency>
       <dependency>
-        <groupId>org.apache.xbean</groupId>
+        <groupId>org.xbean</groupId>
         <artifactId>xbean-spring</artifactId>
         <version>${version}</version>
       </dependency>
